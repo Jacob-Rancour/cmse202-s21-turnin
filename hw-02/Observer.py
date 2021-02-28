@@ -69,7 +69,8 @@ class Observer():
         plt.imshow(rgb)
 
     def calc_stats(self):
-        listm = []
-        lists = []
-        for i in 
+        image_dict = np.array(list(self.load_images(self.im1_filename,self.im2_filename)[self.im1_filename])) 
+        image_dict = np.append(image_dict,np.array(list(self.load_images(self.im1_filename,self.im2_filename)[self.im2_filename])))
+        mean = image_dict.mean()
+        std = image_dict.std()
         return mean, std
